@@ -24,6 +24,7 @@ INCS = -I../include \
 LIBS = \
         -L${BOOST_BASE}/lib -lboost_thread \
         -L${BOOST_BASE}/lib -lboost_system \
+	-L${BOOST_INSTALL_ROOT}/lib -lboost_regex \
 	-L/Users/ankithbti/Development/Cpp/quickfix/lib -lquickfix \
 	-L$(HTTP_SERVER_BASE)/lib -lHttpServer \
 	-lpthread

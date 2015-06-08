@@ -23,6 +23,7 @@ INCS = -I../include \
 LIBS = \
     	-L${BOOST_INSTALL_ROOT}/lib -lboost_thread \
 	-L${BOOST_INSTALL_ROOT}/lib -lboost_system \
+	-L${BOOST_INSTALL_ROOT}/lib -lboost_regex \
         ${GMOCK_ROOT}/gtest/make/gtest.a \
         ${GMOCK_ROOT}/make/gmock.a \
 	-L${MYSQL_API_ROOT}/lib -lmysqlpp \

@@ -2,6 +2,7 @@
 //#include <quickfix/Session.h>
 #include <Add.hpp>
 #include "quickfix/FileStore.h"
+#include <quickfix/FileLog.h>
 #include "quickfix/ThreadedSocketAcceptor.h"
 #include "quickfix/Log.h"
 #include "quickfix/SessionSettings.h"
@@ -31,7 +32,7 @@ int main(int argc, char** argv) {
         FIX::SessionSettings settings(file);
         qfHttpServer::Application application;
         FIX::FileStoreFactory storeFactory(settings);
-        FIX::ScreenLogFactory logFactory(settings);
+        FIX::FileLogFactory logFactory(settings);
         boost::shared_ptr<FIX::ThreadedSocketAcceptor> acceptor(new FIX::ThreadedSocketAcceptor(application, storeFactory, settings, logFactory));
         application.setAcceptor(acceptor);
         acceptor->start();
